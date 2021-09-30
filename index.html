@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica Difusa</title>
+    <link rel="stylesheet" href="./styles.scss">
+    <style>
+
+        #limiteizq {
+            float:left; 
+            width:46%;
+            height: 100vh;
+        }
+
+        #tunel{
+            float:left; 
+            background:rgb(0, 0, 0);
+            width:155px;
+            height: 610px;
+            text-align: center;
+        }
+
+        #limiteder{
+            float:right;
+            width:33%;
+            height: 100vh;
+            position: relative;
+        }
+
+        #pelota {
+            background: rgb(73, 179, 12);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position:absolute;
+            top: 460px;
+            margin-left: 76px;
+            transform: translateX(-50%);
+            top: 200px;
+        }
+
+        #centro {
+            position:absolute;
+            top: 460px;
+            margin-left: 76px;
+            transform: translateX(-50%);
+            top: 520px;
+            background: rgb(255, 255, 255);
+            width: 32px;
+            height: 32px;
+            shape-outside: ellipse(50% 50%);
+            clip-path: ellipse(50% 50%);
+        }
+
+        #ventilador1 {
+            position:absolute;
+            top: 460px;
+            width: 20px; 
+            height: 150px;  
+            margin-left: 68px;  
+            background: rgb(247, 198, 93);
+            -webkit-animation: spin 1s infinite linear;
+        }
+
+        #ventilador2 {
+            position:absolute;
+            top: 460px;
+            width: 20px; 
+            height: 150px;  
+            margin-left: 68px;  
+            background: rgb(30, 89, 167);
+            -webkit-animation: spin 2s infinite linear;
+        }
+
+        #ventilador3 {
+            position:absolute;
+            top: 460px;
+            width: 20px; 
+            height: 150px;  
+            margin-left: 68px;  
+            background: rgb(76, 173, 218);
+            -webkit-animation: spin 3s infinite linear;
+        }
+
+        @-webkit-keyframes spin {
+            0%  {-webkit-transform: rotate(0deg);}
+            100% {-webkit-transform: rotate(360deg);}	
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="limiteizq"></div>
+        <div id="limiteder"></div>
+        <div id="tunel">
+            <div id="pelota"></div>
+            <div id="ventilador1"></div> 
+            <div id="ventilador2"></div> 
+            <div id="ventilador3"></div>  
+            <div id="centro"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
